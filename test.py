@@ -1,16 +1,37 @@
 #Solitaire testing
 from cards import *
 
-cardTest = Card('D', 1)
-print(cardTest)
-y = Pile()
+#create 7 play piles, 4 set piles
+#shuffle deck
+#place cards into piles : index + 1 cards into pile, last card flipped up
 
-for x in values:
-    y.addCard(Card('S',x))
+pile = Pile()
+pile.addCard(Card('A', 'C'))
+pile.addCard(Card('K','S'))
 
-y.printPile()
+pile.printPile()
 
-set1 = {1,2,3,4,5,6}
+x = Card('C', 'E')
+print(x)
+"""
+playPiles = []
+suitPiles = []
+deck = Deck()
+deck.resetDeck()
+deck.shuffleDeck()
 
-for x in set1:
-    print(x)
+for i in range(7):
+    playPiles.append(Pile())
+
+for i in range(4):
+    suitPiles.append(Pile())
+
+for x in range(7):
+    for y in range(x+1):
+        playPiles[x].cards.append(deck.cards.pop())
+    playPiles[x].cards[-1].flip()
+
+for x in playPiles:
+    print('\n')
+    x.printPile()
+"""
