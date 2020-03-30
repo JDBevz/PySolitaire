@@ -12,9 +12,25 @@ playPiles = []
 for i in range(7):
     playPiles.append(Pile())
 
+#Actions needed for play :
+    # move pile from a -> b
+        # move(a, b)
+        # check that chosen pile can be moved
+    # draw card (Deck.drawNext)
+        # show next card in Deck
+        # if no more cards, loop back to the start of the deck
+    # move draw card to pile
+    # move bottom card to suit pile
+    # split pile (and move)
+        # move(a, b, split)
+        # split counted from the 'bottom' of the pile, ie: number of cards to move
 
 
-#play order:
+
+
+
+
+#Auto play order:
 #move kings to empty :
     #Move any king to any empty space
 #move draw card to play pile
